@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 10cm;
+  height: 15cm;
+  page-break-after: always;
+  padding: 12px;
+  position: relative;
+  .productionType {
+    margin-bottom: 8px;
+    h1 {
+      font-weight: 700;
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+  .header {
+    text-align: center;
+    > h1 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    > span {
+      text-align: center;
+      font-size: 12px;
+      display: block;
+      padding: 0;
+    }
+    .headerBarcode {
+      width: auto;
+      height: 85px;
+      display: flex;
+      // height: 70px;
+      justify-content: space-between;
+      .barcodeAndType {
+        padding: 0;
+        width: auto;
+        h1 {
+          font-size: 25px;
+        }
+      }
+      .qrLot {
+        width: 65px;
+        height: 65px;
+      }
+    }
+  }
+  .table {
+    table {
+      table-layout: fixed;
+      border-collapse: collapse;
+      thead {
+        th {
+          font-weight: 600;
+          font-size: 11px;
+        }
+      }
+      tr,
+      th,
+      td {
+        border: 1px solid #000;
+      }
+      th {
+        height: 18px;
+      }
+      td {
+        font-size: 10px;
+        text-align: center;
+        word-wrap: break-word;
+        &:nth-child(1) {
+          font-weight: 600;
+          min-width: 49.5px;
+          max-width: 49.5px;
+        }
+        &:not(:nth-child(1)) {
+          min-width: calc((10cm / 4) - 19px);
+          max-width: calc((10cm / 4) - 19px);
+          height: 30px;
+          padding: 0 6px;
+        }
+      }
+      .date {
+        td {
+          height: 20px;
+        }
+      }
+    }
+    .tableFooter {
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          display: flex;
+          .gross {
+            border: 1px solid #000;
+            border-top: 0;
+            border-left: 0;
+            font-size: 10px;
+            font-weight: 600;
+            display: block;
+            width: calc(32px + calc(4.6cm / 4));
+            padding: 2px 0;
+          }
+          h1 {
+            border: 1px solid #000;
+            border-top: 0;
+            font-size: 10px;
+            font-weight: 600;
+            display: block;
+            width: calc(32px + calc(2cm / 4));
+            padding: 2px 0;
+          }
+          .sealSpan {
+            border: 1px solid #000;
+            border-left: 0;
+            border-top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: calc(32px + calc(28.7cm / 4));
+            font-size: 10px;
+            font-weight: 500;
+          }
+          span {
+            border: 1px solid #000;
+            border-left: 0;
+            border-top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(32px + calc(4.7cm / 4));
+            font-size: 11px;
+            font-weight: 600;
+          }
+        }
+
+        // li{
+        // 	display: flex;
+        // 	h1{
+        // 		border: 1px solid #000;
+        // 		border-top: 0;
+        // 		font-size: 10px;
+        // 		font-weight: 600;
+        // 		display: block;
+        // 		width: calc(32px + calc(2cm / 4));
+        // 		padding: 2px 0;
+
+        // 	}
+        // 	span{
+        // 		border: 1px solid #000;
+        // 		border-left: 0;
+        // 		border-top: 0;
+        // 		padding-left: 4px;
+        // 		font-size: 11px;
+        // 		display: flex;
+        // 		align-items: center;
+        // 		flex: 1;
+        // 	}
+        // }
+
+        // .seal {
+        // 	display: flex;
+        // 	h1 {
+        // 		border: 1px solid #000;
+        // 		border-top: 0;
+        // 		font-size: 11px;
+        // 		font-weight: 600;
+        // 		display: block;
+        // 		width: calc(32px + calc(10cm / 4));
+        // 		border-right: 0;
+        // 		padding: 2px 0;
+        // 	}
+        // 	span {
+        // 		padding-left: 4px;
+        // 		font-size: 12px;
+        // 		display: flex;
+        // 		align-items: center;
+        // 		flex: 1;
+        // 		border: 1px solid #000;
+        // 		border-top: 0;
+        // 	}
+        // }
+        // .quantity {
+        // 	display: flex;
+        // 	h1 {
+        // 		border: 1px solid #000;
+        // 		border-top: 0;
+        // 		font-size: 10px;
+        // 		font-weight: 600;
+        // 		display: block;
+        // 		width: calc(32px + calc(10cm / 4));
+        // 		border-right: 0;
+        // 		padding: 2px 0;
+        // 	}
+        // 	span {
+        // 		font-size: 10px;
+        // 		display: flex;
+        // 		align-items: center;
+        // 		justify-content: center;
+        // 		width: 76.5px;
+        // 		border: 1px solid #000;
+        // 		border-top: 0;
+
+        // 	}
+        // 	.gross{
+        // 		border-left: 0;
+        // 		width: calc(32px + calc(4.5cm / 4));
+        // 	}
+        // }
+      }
+    }
+
+    .footer {
+      .serial {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        h1 {
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+
+      .wrapper {
+        display: flex;
+        margin-top: 8px;
+        .column {
+          display: flex;
+          flex-direction: column;
+          img {
+            height: 100%;
+            width: 100%;
+            max-height: 170px;
+            max-width: 260px;
+          }
+          > svg {
+            display: block;
+            position: absolute;
+            bottom: 20px;
+          }
+        }
+
+        > svg {
+          display: block;
+          transform: rotate(-90deg) !important;
+          position: absolute;
+          bottom: 100px;
+          right: -40px;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  @page {
+    margin: 0;
+    size: 10cm 15cm;
+  }
+  html,
+  body {
+    margin: 0;
+  }
+}

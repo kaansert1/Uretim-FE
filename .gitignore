@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Builds / bundles
+dist/
+out/
+release/
+*.log
+
+# Electron-builder artifacts
+*.blockmap
+*.dmg
+*.exe
+*.AppImage
+*.snap
+*.deb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files (keep example)
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+
+
